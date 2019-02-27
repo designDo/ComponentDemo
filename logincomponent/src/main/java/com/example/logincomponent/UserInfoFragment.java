@@ -7,10 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.alibaba.android.arouter.facade.annotation.Route;
 
 /**
  * Created by apple on 2019/2/26.
  */
+@Route(path = "/loginComponent/UserInfoFragment")
 public class UserInfoFragment extends Fragment {
 
   @Nullable @Override

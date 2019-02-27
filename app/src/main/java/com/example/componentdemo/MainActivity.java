@@ -3,6 +3,7 @@ package com.example.componentdemo;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
             .withParcelable("userInfo", new UserInfo("TangSan", 18))
             .navigation();
         // ServiceFactory.getInstance().getmLoginService().launch(MainActivity.this, "");
+      }
+    });
+
+    findViewById(R.id.user_info).setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Fragment fragment =
+            (Fragment) ARouter.getInstance().build("/loginComponent/UserInfoFragment").navigation();
+        getSupportFragmentManager().beginTransaction().add(R.id.container, fragment).commit();
       }
     });
 
