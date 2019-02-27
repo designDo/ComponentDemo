@@ -44,12 +44,12 @@
       android:text="跳转到-搜索-组件(测试result)"
       android:textStyle="bold"
       />
-  <TextView
-      android:id="@+id/show_ui"
+  <Button
+      android:id="@+id/test_interface"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:padding="5dp"
-      android:text="显示登录组件的UserFragment"
+      android:text="测试组件内的接口"
       android:textStyle="bold"
       />
 

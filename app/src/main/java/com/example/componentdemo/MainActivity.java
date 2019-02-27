@@ -13,6 +13,7 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.componentlib.ServiceFactory;
+import com.example.logincomponent.ALoginService;
 import com.example.logincomponent.UserInfo;
 
 public class MainActivity extends AppCompatActivity {
@@ -81,11 +82,12 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    findViewById(R.id.show_ui).setOnClickListener(new View.OnClickListener() {
+    findViewById(R.id.test_interface).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
-        ServiceFactory.getInstance()
-            .getmLoginService()
-            .getUserInfoFragment(getSupportFragmentManager(), R.id.container, new Bundle());
+        ARouter.getInstance().navigation(ALoginService.class).isLogin("TangSan");
+        /*((ALoginService) ARouter.getInstance()
+            .build("/loginComponent/isLogin")
+            .navigation()).isLogin("TangSan");*/
       }
     });
   }
