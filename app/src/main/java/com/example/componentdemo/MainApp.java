@@ -1,6 +1,7 @@
 package com.example.componentdemo;
 
 import android.app.Application;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.componentlib.AppConfig;
 import com.example.componentlib.IAppComponent;
 
@@ -16,9 +17,16 @@ public class MainApp extends Application implements IAppComponent {
     return application;
   }
 
+  private boolean isDebugARouter = true;
+
   @Override public void onCreate() {
     super.onCreate();
     initial(this);
+    if (isDebugARouter){
+      ARouter.openLog();
+      ARouter.openDebug();
+    }
+    ARouter.init(MainApp.this);
   }
 
   @Override public void initial(Application app) {

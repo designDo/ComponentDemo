@@ -9,22 +9,30 @@
     tools:context=".MainActivity"
     >
 
-  <TextView
+  <Button
       android:id="@+id/login"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:padding="5dp"
-      android:text="跳转到 登录 组件"
+      android:text="跳转到-登录-组件(测试数据传递)"
       android:textStyle="bold"
-
       />
 
-  <TextView
+  <Button
       android:id="@+id/go_search"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:padding="5dp"
-      android:text="跳转到 搜索 组件"
+      android:text="跳转到-搜索-组件(测试Uri跳转)"
+      android:textStyle="bold"
+      />
+
+  <Button
+      android:id="@+id/go_search_result"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="5dp"
+      android:text="跳转到-搜索-组件(测试result)"
       android:textStyle="bold"
       />
   <TextView
